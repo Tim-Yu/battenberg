@@ -8,7 +8,13 @@ The instructions below will install the latest stable Battenberg version.
 
 #### Prerequisites
 
-Installing from Github requires devtools and Battenberg requires the modified copynumber package from "igordot/copynumber" and readr, gtools, splines, ggplot2, gridExtra, RColorBrewer, VariantAnnotation, GenomicRanges and ASCAT. The pipeline requires parallel and doParallel. From the command line run:
+Installing from Github requires devtools and Battenberg requires the modified copynumber package from "igordot/copynumber" and readr, gtools, splines, ggplot2, gridExtra, RColorBrewer, VariantAnnotation, GenomicRanges and ASCAT.
+The java version required for this distribution is JDK 8-14. You may want to set an env with correct Java version
+```
+conda install openjdk=8.0.144
+```
+
+The pipeline requires parallel and doParallel. From the command line run:
 
 ```
 R -q -e 'BiocManager::install(c("devtools", "splines", "readr", "doParallel", "ggplot2", "RColorBrewer", "gridExtra", "gtools", "parallel", "igordot/copynumber", "VariantAnnotation", "GenomicRanges"))'
